@@ -33,3 +33,17 @@ variable "allowed_ssh_cidr" {
   description = "IP range for allowed traffic inbound via SSH"
 }
 
+
+#Variables for our EC2 instance
+variable "ami_id" {
+  description = "ID for the pre-baked AMI we'll be using"
+}
+
+variable "key_pair_name" {
+  description = "Key pair we'll be using to SSH into instance"
+}
+
+variable "ec2_name" {
+  description = "Name for our EC2 instance"
+  default     = "aws-showcase-ec2"
+}

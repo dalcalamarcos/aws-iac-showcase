@@ -31,3 +31,12 @@ module "security_group" {
   allowed_ssh_cidr = var.allowed_ssh_cidr
   sg_name = var.sg_name
 }
+
+module "ec2" {
+  source         = "./modules/compute"
+  ami_id         = var.ami_id
+  subnet_id      = module.subnet.subnet_id
+  sg_id          = module.security_group.sg_id
+  key_pair_name  = var.key_pair_name
+  ec2_name       = var.ec2_name
+}
