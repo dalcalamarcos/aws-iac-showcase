@@ -13,6 +13,8 @@ This project demonstrates a fully modular and cost-free infrastructure deploymen
 
 ## 🧱 Architecture Overview
 
+
+
 The infrastructure includes:
 
 - ✅ Custom VPC
