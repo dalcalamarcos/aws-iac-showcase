@@ -24,3 +24,10 @@ module "route_table" {
   subnet_id = module.subnet.subnet_id
   route_table_name = var.route_table_name
 }
+
+module "security_group" {
+  source = "./modules/security"
+  vpc_id = module.vpc.vpc_id
+  allowed_ssh_cidr = var.allowed_ssh_cidr
+  sg_name = var.sg_name
+}
