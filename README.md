@@ -1,4 +1,19 @@
-CIDR-planned to leave room for a future **private subnet** (e.g., `10.0.0.0/24`) for backend services, databases, or NAT Gateway setups. This follows best practices in scalable infrastructure design.
+# AWS IaC Showcase - Free Tier Infrastructure Deployment
+
+This project demonstrates a fully modular and cost-free infrastructure deployment on AWS using Terraform. It is designed as a technical showcase for Infrastructure as Code (IaC), cloud architecture fundamentals, and container provisioning — all within the AWS Free Tier limits.
+
+## 🚀 Goals
+
+- Fully modular Terraform setup
+- Secure and minimal AWS architecture
+- Docker container provisioning via EC2
+- Zero-cost deployment on AWS Free Tier
+
+---
+
+## 🧱 Architecture Overview
+
+> 💡 _Note_: This project uses a single **public subnet** for simplicity. However, the VPC is CIDR-planned to leave room for a future **private subnet** (e.g., `10.0.0.0/24`) for backend services, databases, or NAT Gateway setups. This follows best practices in scalable infrastructure design.
 
 The networking layer includes:
 
