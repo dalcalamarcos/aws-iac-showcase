@@ -1,30 +1,13 @@
-# AWS IaC Showcase - Free Tier Infrastructure Deployment
+CIDR-planned to leave room for a future **private subnet** (e.g., `10.0.0.0/24`) for backend services, databases, or NAT Gateway setups. This follows best practices in scalable infrastructure design.
 
-This project demonstrates a fully modular and cost-free infrastructure deployment on AWS using Terraform. It is designed as a technical showcase for Infrastructure as Code (IaC), cloud architecture fundamentals, and container provisioning — all within the AWS Free Tier limits.
-
-## 🚀 Goals
-
-- Fully modular Terraform setup
-- Secure and minimal AWS architecture
-- Docker container provisioning via EC2
-- Zero-cost deployment on AWS Free Tier
-
----
-
-## 🧱 Architecture Overview
-
-
-
-The infrastructure includes:
+The networking layer includes:
 
 - ✅ Custom VPC
 - ✅ Public Subnet
-- ✅ Internet Gateway + Route Table
-- ✅ Security Group for SSH & HTTP
-- ✅ EC2 (t2.micro) instance with:
-  - Public IP
-  - Docker installed via user data
-  - Lightweight container (e.g., NGINX) running on port 80
+- ✅ Internet Gateway
+- ✅ Route Table + Association
+
+> 🔜 Security Group and EC2 Instance will be added in upcoming phases of the project.
 
 All components are provisioned via modular Terraform code.
 
@@ -39,13 +22,13 @@ aws-iac-showcase/
 ├── outputs.tf
 ├── terraform.tfvars
 ├── modules/
-│   ├── compute/
-│   ├── security/
+│   ├── compute/               # EC2, user data, Docker (upcoming)
+│   ├── security/              # Security Group, Key Pair (upcoming)
 │   └── networking/
-│       ├── vpc/
-│       ├── subnet/
-│       ├── internet_gateway/
-│       └── route_table/
+│       ├── vpc/               # VPC creation
+│       ├── subnet/            # Public subnet
+│       ├── internet_gateway/  # IGW
+│       └── route_table/       # Route table + association
 ```
 
 ---
@@ -65,7 +48,7 @@ aws-iac-showcase/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/aws-iac-showcase.git
+   git clone https://github.com/dalcalamarcos/aws-iac-showcase.git
    cd aws-iac-showcase
    ```
 
@@ -99,7 +82,7 @@ aws-iac-showcase/
 ## 👨‍💻 Author
 
 **Marcos Alcala**  
-DevOps Engineer in training — passionate about automation, cloud.com) , and clean infrastructure.
+DevOps Engineer in training — passionate about automation, cloud, and clean infrastructure.
 
 [LinkedIn](https://www.linkedin.com/in/marcos-alcala-037066142/) • [GitHub](https://github.com/dalcalamarcos)
 
@@ -108,4 +91,3 @@ DevOps Engineer in training — passionate about automation, cloud.com) , and cl
 ## 📌 License
 
 MIT License — free to use and adapt.
-
