@@ -21,8 +21,8 @@ The networking layer includes:
 - ✅ Public Subnet
 - ✅ Internet Gateway
 - ✅ Route Table + Association
-
-> 🔜 Security Group and EC2 Instance will be added in upcoming phases of the project.
+- ✅ Security Group
+- ✅ EC2 Instance
 
 All components are provisioned via modular Terraform code.
 
