@@ -1,0 +1,24 @@
+# Example variable assignments for aws-iac-showcase
+
+# VPC
+vpc_cidr_block = "10.0.0.0/16"
+vpc_name       = "aws-showcase-vpc"
+
+# Subnet
+subnet_cidr_block = "10.0.1.0/24"
+subnet_name       = "aws-showcase-subnet"
+
+# Internet Gateway
+igw_name = "aws-showcase-igw"
+
+# Route Table
+route_table_name = "aws-showcase-public-rt"
+
+# Security Group
+sg_name           = "aws-showcase-sg"
+allowed_ssh_cidr  = "X.X.X.X/32" # Replace with your IP before applying
+
+# EC2
+ec2_name       = "aws-showcase-ec2"
+ami_id         = "ami-0c101f26f147fa7fd"   # Amazon Linux 2 (us-east-1)
+key_pair_name  = "aws-showcase-key"
