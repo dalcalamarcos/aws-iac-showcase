@@ -20,7 +20,7 @@ module "igw" {
 module "route_table" {
   source = "./modules/networking/route_table"
   vpc_id = module.vpc.vpc_id
-  igw_id = module.internet_gateway.igw_id
+  igw_id = module.igw.igw_id
   subnet_id = module.subnet.subnet_id
   route_table_name = var.route_table_name
 }
